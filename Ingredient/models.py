@@ -8,6 +8,8 @@ class Ingredient(models.Model):
     protein = models.CharField(max_length=100,help_text = 'Enter protein content per 100 g')
     fibre = models.CharField(max_length=100,help_text = 'Enter fibre content per 100 g')
     img_url = models.URLField(max_length=200)
+    def __str__(self):
+        return self.name
     
 class Dish(models.Model):
     name = models.TextField()
@@ -15,3 +17,5 @@ class Dish(models.Model):
     directions = models.TextField()
     img_url = models.TextField()
     list_ingredient = models.ManyToManyField(Ingredient)
+    def __str__(self):
+        return self.name
