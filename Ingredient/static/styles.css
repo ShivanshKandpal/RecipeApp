@@ -5,13 +5,13 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .container {
     max-width: 100%;
     margin: 0 auto;
     padding: 40px 100px 400px 100px;
-    background-color: #FFCF96;
+    /* background-color: #FFCF96; */
     border-radius: 10px;
+    background-image: url('https://imgs.search.brave.com/RD9jCE64ewEB6qTPR7yjf1orZ6Qs0oyQh_yaPzQe4R0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuYWxsLWZyZWUt/ZG93bmxvYWQuY29t/L2ltYWdlcy9ncmFw/aGljbGFyZ2UvZmFz/dF9mb29kX2JhY2tn/cm91bmRfdmFyaW91/c19zeW1ib2xzX3Nr/ZXRjaF9yZXBlYXRp/bmdfZGVzaWduXzY4/MjgwNDUuanBn');
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color : #fff
 }

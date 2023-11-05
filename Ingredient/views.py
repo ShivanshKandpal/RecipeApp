@@ -10,6 +10,8 @@ def indexView(request):
     # all_ingredients = ingredientItem.objects.all()
     return render(request, 'index.html')
 
-def sbrview(request):
-    return render(request,'sbr.html')
+def searchview(request):
+    return render(request,'search.html')
 
+def createview(request):
+    return render(request,'create.html')
