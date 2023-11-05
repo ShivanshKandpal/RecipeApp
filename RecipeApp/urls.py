@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Ingredient.views import indexView
+from Ingredient.views import indexView,sbrview
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',indexView),
+    path('sbr/',sbrview)
 ]
