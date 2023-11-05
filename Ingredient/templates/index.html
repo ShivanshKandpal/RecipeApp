@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Get Started</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script type="text/javascript" src="{% static 'script.js' %}"></script>
 </head>
 <body>
     <div class="container">
@@ -12,13 +13,13 @@
         <div class="options">
             <a href="SearchRecipe.html">
                 <div class="option">
-                    <img src="option1.jpeg" alt="Option 1">
+                    <img src="{% static 'option1.jpeg'%}" alt="Option 1">
                     <h2>Search Recipe</h2>
                 </div>
             </a>
             <a href="CreateRecipe.html">
                 <div class="option">
-                    <img src="option2.jpg"  alt="Option 2">
+                    <img src="{% static 'option2.jpg'%}"  alt="Option 2">
                     <h2>Create Recipe</h2>
                 </div>
             </a>
