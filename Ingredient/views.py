@@ -19,12 +19,14 @@ def createview(request):
     return render(request,'create.html')
 
 def recipe_search(request):
-    print("form submitted")
+    recipes = Dish.objects.all()
     if request.method == 'POST':
         form = IngredientForm(request.POST)
         if form.is_valid():
-            selected_ingredients = form.cleaned_data['ingredients']
-            recipes =  Dish.objects.filter(list_ingredient__in = selected_ingredients).distinct()
+            selected_ingredients = form.cleaned_data['ingredient_names'].split()
+            # recipes =  Dish.objects.filter(list_ingredient__in = selected_ingredients).distinct()
+            for ing in selected_ingredients:
+                recipes = recipes.filter(list_ingredient__name__icontains=ing).distinct()
         else:
             recipes = []
     else:

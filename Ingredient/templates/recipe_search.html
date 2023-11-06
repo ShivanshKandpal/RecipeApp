@@ -1,4 +1,4 @@
-<form method="post" action="{% url 'recipe_search' %}">
+<!-- <form method="post" action="{% url 'recipe_search' %}">
     {% csrf_token %}
     <fieldset>
       <legend>Select Ingredients:</legend>
@@ -14,7 +14,13 @@
       </ul>
     </fieldset>
     <button type="submit">Search</button>
-  </form>
+  </form> -->
+  <form method="post" action="{% url 'recipe_search' %}">
+    {% csrf_token %}
+    {{ form.ingredient_names.label_tag }}
+    {{ form.ingredient_names }}
+    <button type="submit">Search</button>
+</form>
   
   <ul>
     {% for recipe in recipes %}
@@ -22,12 +28,16 @@
         ul {
             list-style-type: none;
         }
+        .recipe-name{
+            font-size: 25px;
+            text-decoration: none;
+        }
     </style>
     <li>
         <div style="display: flex; align-items: center;">
             <img src="{{ recipe.img_url }}" alt="{{ recipe.name }}" style="max-width: 100px;">
             <span style="margin-left: 20px;">
-                <a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.name }}</a>
+                <a href="{% url 'recipe_detail' recipe.id %}" class = 'recipe-name'>{{ recipe.name }}</a>
             </span>
         </div>
     </li>
