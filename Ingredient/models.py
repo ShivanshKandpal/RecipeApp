@@ -13,7 +13,6 @@ class Ingredient(models.Model):
     
 class Dish(models.Model):
     name = models.TextField()
-    ingredients = models.TextField()
     directions = models.TextField()
     img_url = models.TextField()
     list_ingredient = models.ManyToManyField(Ingredient)
