@@ -40,6 +40,7 @@ def recipe_search(request):
         
 def recipe_detail(request, recipe_id):
     recipe = get_object_or_404(Dish, pk=recipe_id)
+    recipe.directions=recipe.directions.split('.')[:-1]
     return render(request, 'recipe_detail.html', {'recipe': recipe})
 
 def create_recipe(request):

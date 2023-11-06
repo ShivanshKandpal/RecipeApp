@@ -24,7 +24,11 @@
         </div>
         <div class="directions">
           <h2>Directions:</h2>
-          <p>{{ recipe.directions }}</p>
+            <ul>
+                {% for i in recipe.directions %}
+                <li>{{ i }}.</li>             
+                {% endfor %}
+            </ul>
         </div>
       </div>
       <div class="image-content">

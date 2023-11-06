@@ -15,9 +15,9 @@ class Dish(models.Model):
     name = models.TextField()
     directions = models.TextField()
     img_url = models.TextField()
-    carbs = models.CharField(max_length=100,help_text = 'Enter carbohydrate content per 100 g',default = 1)
-    protein = models.CharField(max_length=100,help_text = 'Enter protein content per 100 g',default = 1)
-    fat = models.CharField(max_length=100,help_text = 'Enter fat content per 100 g',default = 1)
+    carbs = models.CharField(max_length=100,help_text = 'Enter carbohydrate content per serve',default = 1)
+    protein = models.CharField(max_length=100,help_text = 'Enter protein content per serve',default = 1)
+    fat = models.CharField(max_length=100,help_text = 'Enter fat content per serve',default = 1)
     img_url = models.URLField(max_length=200,null = True)
     list_ingredient = models.ManyToManyField(Ingredient)
     def __str__(self):
