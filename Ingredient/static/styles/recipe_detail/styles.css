@@ -6,6 +6,30 @@ body{
     background-size: 100%;
 }
 
+.navbar {
+  background-color:  rgba(51, 51, 51, 0.6); /* Grey background color */
+  overflow: hidden;
+  margin-bottom: 20px;
+
+}
+
+/* Style for the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Style for the navigation bar links on hover */
+.navbar a:hover {
+  background-color: rgba(221, 221, 221, 1); /* Light grey background on hover */
+  color: black;
+}
+
+
 .section-container {
     width: 80%;
     margin: 0 auto;
