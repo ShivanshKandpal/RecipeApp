@@ -1,0 +1,14 @@
+.section-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional border to provide some separation from the shadow */
+    border-radius: 10px; /* Rounded corners for the div */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow properties */
+    background-color: #FFEED9; /* Background color of the div */
+    margin-bottom: 20px; /* Add margin for spacing between sections */
+  }
+
+  .section-container:hover {
+    transform: scale(1.05); /* Increase the size of the div on hover */
+  }
