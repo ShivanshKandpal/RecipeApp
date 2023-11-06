@@ -1,0 +1,41 @@
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.75em;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  form {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 2em;
+  }
+
+  input[type="text"] {
+    width: 300px; /* Adjust the width to your desired size */
+    height: 40px; /* Adjust the height to your desired size */
+    padding: 5px; /* Add padding for spacing inside the input field */
+    font-size: 1.5rem;
+  }
+
+.recipes{
+    background-color: #fff; /* Background color of the div */
+    border: 1px solid #ddd; /* Optional border to provide some separation from the shadow */
+    border-radius: 10px; /* Rounded corners for the div */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow properties */
+    margin: 20px; /* Add margin for spacing */
+    padding: 20px; /* Add padding to the content inside the div */
+    margin-left: 100px;
+    margin-right: 100px;
+}
