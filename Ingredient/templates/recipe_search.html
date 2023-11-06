@@ -1,0 +1,23 @@
+<form method="post" action="{% url 'recipe_search' %}">
+    {% csrf_token %}
+    <fieldset>
+      <legend>Select Ingredients:</legend>
+      {{ form.ingredients.label_tag }}
+      <ul>
+        {% for ingredient in form.ingredients %}
+          <li>
+            <label>
+              {{ ingredient.tag }} {{ ingredient.choice_label }}
+            </label>
+          </li>
+        {% endfor %}
+      </ul>
+    </fieldset>
+    <button type="submit">Search</button>
+  </form>
+  
+  <ul>
+    {% for recipe in recipes %}
+      <li><a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.name}}</a></li>
+    {% endfor %}
+  </ul>

@@ -1,0 +1,12 @@
+<h1>{{ recipe.name }}</h1>
+<img src="{{ recipe.img_url }}" alt="{{ recipe.name }}" style="max-width: 300px;">
+
+<h2>Ingredients:</h2>
+<ul>
+    {% for ingredient in recipe.list_ingredient.all %}
+        <li>{{ ingredient.name }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Directions:</h2>
+<p>{{ recipe.directions }}</p>
