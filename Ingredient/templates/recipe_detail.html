@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-{% load static%}
+  {% load static %}
   <link rel="stylesheet" href="{% static 'styles/recipe_detail/styles.css' %}">
 </head>
 <body>
   <div class="section-container">
-    <h1>{{ recipe.name }}</h1>
-    <img src="{{ recipe.img_url }}" alt="{{ recipe.name }}" style="max-width: 300px;">
-  </div>
-
-  <div class="section-container">
-    <h2>Ingredients:</h2>
-    <ul>
-      {% for ingredient in recipe.list_ingredient.all %}
-        <li>{{ ingredient.name }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div class="section-container">
-    <h2>Directions:</h2>
-    <p>{{ recipe.directions }}</p>
+    <h1 class="title">{{ recipe.name }}</h1>
+    <div class="content-container">
+      <div class="text-content">
+        <div class="ingredients">
+          <h2>Ingredients:</h2>
+          <ul>
+            {% for ingredient in recipe.list_ingredient.all %}
+              <li>{{ ingredient.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="directions">
+          <h2>Directions:</h2>
+          <p>{{ recipe.directions }}</p>
+        </div>
+      </div>
+      <div class="image-content">
+        <img src="{{ recipe.img_url }}" alt="{{ recipe.name }}">
+      </div>
+    </div>
   </div>
 </body>
 </html>

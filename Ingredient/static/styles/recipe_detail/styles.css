@@ -1,14 +1,62 @@
+/* Style for the container div */
+
+body{
+    background-image: url('../bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .section-container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ddd; /* Optional border to provide some separation from the shadow */
-    border-radius: 10px; /* Rounded corners for the div */
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow properties */
-    background-color: #FFEED9; /* Background color of the div */
-    margin-bottom: 20px; /* Add margin for spacing between sections */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(252, 245, 237, 0.95);
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    transition: transform 0.3s;
   }
-
+  
   .section-container:hover {
     transform: scale(1.05); /* Increase the size of the div on hover */
   }
+
+  /* Style for the title */
+  .title {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  /* Style for the content container */
+  .content-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Place items at the ends of the container */
+    align-items: flex-start; /* Align items at the top */
+    width: 90%;
+  }
+  
+  /* Style for the text content (ingredients and directions) */
+  .text-content {
+    width: 90%; /* Adjust the width as needed */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Style for the image content */
+  .image-content {
+    width: 30%; /* Adjust the width as needed */
+    text-align: center; /* Center the image horizontally */
+    padding-left: 20px;
+  }
+  
+  /* Style for the image */
+  .image-content img {
+    max-width: 70%; /* Ensure the image doesn't exceed its container width */
+  }
+  

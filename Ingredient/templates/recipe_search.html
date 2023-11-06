@@ -17,6 +17,11 @@
   </form> -->
   {% load static %}
   <link rel="stylesheet" href="{% static 'styles/recipe_search/styles.css' %}">
+  <div class="navbar">
+    <a href="/">Home</a>
+    <a href="/create_recipe/">Create Recipe</a>
+    </div>
+
   <form method="post" action="{% url 'recipe_search' %}">
     {% csrf_token %}
     {{ form.ingredient_names.label_tag }}

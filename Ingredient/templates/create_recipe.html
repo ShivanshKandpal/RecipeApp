@@ -1,6 +1,16 @@
-<h1>Create a New Recipe</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Create Recipe</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create a New Recipe</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'styles/create_recipe/styles.css' %}">
+</head>
+<body>
+    <h1>Create a New Recipe</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Recipe</button>
+    </form>
+</body>
+</html>
