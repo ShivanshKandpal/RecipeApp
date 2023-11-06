@@ -1,9 +1,9 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,get_object_or_404,redirect
 
 # Create your views here.
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import IngredientForm
+from .forms import IngredientForm,RecipeForm
 import json
 from .models import Dish
 from django.views.decorators.csrf import csrf_exempt
@@ -41,3 +41,14 @@ def recipe_search(request):
 def recipe_detail(request, recipe_id):
     recipe = get_object_or_404(Dish, pk=recipe_id)
     return render(request, 'recipe_detail.html', {'recipe': recipe})
+
+def create_recipe(request):
+    if request.method == 'POST':
+        form = RecipeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('')  # Redirect to a recipe list page or any other page
+    else:
+        form = RecipeForm()
+
+    return render(request, 'recipes/create_recipe.html', {'form': form})
