@@ -1,3 +1,32 @@
+body{
+    background-image: url('../bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.navbar {
+    background-color:  rgba(51, 51, 51, 0.6); /* Grey background color */
+    overflow: hidden;
+    margin-bottom: 20px;
+
+  }
+
+  /* Style for the navigation bar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /* Style for the navigation bar links on hover */
+  .navbar a:hover {
+    background-color: rgba(221, 221, 221, 1); /* Light grey background on hover */
+    color: black;
+  }
+
 button[type="submit"] {
     background-color: #007BFF;
     color: #fff;
@@ -20,6 +49,8 @@ button[type="submit"] {
     border: 1px solid #ccc;
     border-radius: 20px;
     font-size: 2em;
+    background-color: rgba(252, 245, 237, 0.9);
+    
   }
 
   input[type="text"] {
@@ -38,4 +69,5 @@ button[type="submit"] {
     padding: 20px; /* Add padding to the content inside the div */
     margin-left: 100px;
     margin-right: 100px;
+    background-color: rgba(252, 245, 237, 0.9);
 }
