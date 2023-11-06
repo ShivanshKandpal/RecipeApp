@@ -18,6 +18,18 @@
   
   <ul>
     {% for recipe in recipes %}
-      <li><a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.name}}</a></li>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+    </style>
+    <li>
+        <div style="display: flex; align-items: center;">
+            <img src="{{ recipe.img_url }}" alt="{{ recipe.name }}" style="max-width: 100px;">
+            <span style="margin-left: 20px;">
+                <a href="{% url 'recipe_detail' recipe.id %}">{{ recipe.name }}</a>
+            </span>
+        </div>
+    </li>
     {% endfor %}
   </ul>
