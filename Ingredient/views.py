@@ -51,4 +51,4 @@ def create_recipe(request):
     else:
         form = RecipeForm()
 
-    return render(request, 'recipes/create_recipe.html', {'form': form})
+    return render(request, 'create_recipe.html', {'form': form})
