@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import IngredientForm,RecipeForm
 import json
-from .models import Dish
+from .models import Dish,Ingredient
 from django.views.decorators.csrf import csrf_exempt
 
 def indexView(request):
@@ -46,8 +46,14 @@ def create_recipe(request):
     if request.method == 'POST':
         form = RecipeForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('')  # Redirect to a recipe list page or any other page
+            q=form.save(commit=False)
+            q.save()
+            print(request.POST.getlist('list_ingredients'))
+            ingList=[Ingredient.objects.get(id=i) for i in request.POST.getlist('list_ingredients')]+[Ingredient.objects.create(name=i) for i in request.POST['new_ingredients'].split(',')]
+            for i in ingList:
+                q.list_ingredient.add(i)
+            q.save()
+            return redirect('/')  # Redirect to a recipe list page or any other page
     else:
         form = RecipeForm()
 
