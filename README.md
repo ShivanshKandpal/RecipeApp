@@ -1,7 +1,7 @@
 # RecipeApp
 
 
-
+A recipe app to search recipes by ingredients implemented with django, you can add Recipes.
 
 
 ![image](https://github.com/ShivanshKandpal/RecipeApp/assets/147196355/0de18c19-8ce9-45cf-a0a4-073d5ba27f19)
