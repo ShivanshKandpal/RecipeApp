@@ -30,6 +30,14 @@
                 {% endfor %}
             </ul>
         </div>
+        <div class = 'nutrition'>
+          <h2>Nutrition</h2>
+          <ul>
+            <li>Carbohydrate : {{recipe.carbs}} g/server</li>
+            <li>Protein : {{recipe.protein}} g/server</li>
+            <li>Fat : {{recipe.fat}} g/server</li>
+          </ul>
+        </div>
       </div>
       <div class="image-content">
         <img src="{{ recipe.img_url }}" alt="{{ recipe.name }}">
